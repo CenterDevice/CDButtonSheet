@@ -8,7 +8,6 @@
 
 
 @interface CDButtonSheetLabel : UILabel
-//- (void) setDelegate:(id)delegate;
 @end
 
 

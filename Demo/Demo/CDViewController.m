@@ -22,7 +22,7 @@
     
     self.buttonSheet.delegate = self;
 //    self.buttonSheet.buttonSheetSelectedColor = [UIColor yellowColor];
-    [self.buttonSheet setLabels:@[ @"Abbrechen", @"Miteigentümer", @"Bearbeiter", @"Leser", @"Keine Berechtigung" ]];
+//    [self.buttonSheet setLabels:@[ @"Abbrechen", @"Miteigentümer", @"Bearbeiter", @"Leser", @"Keine Berechtigung" ]];
 }
 
 #pragma mark - CDButtonSheetDelegate
