@@ -7,10 +7,10 @@
 //
 
 #import "CDViewController.h"
-#import "CDButtonSheetView.h"
+#import "CDButtonSheet.h"
 
 @interface CDViewController () <CDButtonSheetDelegate>
-@property(weak, nonatomic) IBOutlet CDButtonSheetView* buttonSheet;
+@property(weak, nonatomic) IBOutlet CDButtonSheet* buttonSheet;
 @end
 
 @implementation CDViewController
@@ -18,16 +18,15 @@
 - (void) viewDidLoad
 {
     [super viewDidLoad];
-    [self.buttonSheet prepareForUse];
     
     self.buttonSheet.delegate = self;
-//    self.buttonSheet.buttonSheetSelectedColor = [UIColor yellowColor];
-//    [self.buttonSheet setLabels:@[ @"Abbrechen", @"Miteigentümer", @"Bearbeiter", @"Leser", @"Keine Berechtigung" ]];
+    self.buttonSheet.buttonSheetSelectedColor = [UIColor yellowColor];
+    self.buttonSheet.buttonLabels = @[ @"Abbrechen", @"Miteigentümer", @"Bearbeiter", @"Leser", @"Keine Berechtigung" ];
 }
 
 #pragma mark - CDButtonSheetDelegate
 
-- (void) didSelectButtonAtIndex:(NSUInteger)index
+- (void) buttonSheet:(CDButtonSheet*)sheet didSelectButtonAtIndex:(NSUInteger)index
 {
     NSLog(@"SELECTED: %d", index);
 }

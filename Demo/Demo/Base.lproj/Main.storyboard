@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="DIO-w7-7Fd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13A598" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="DIO-w7-7Fd">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,81 +16,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8pp-Ee-e3J" userLabel="BUTTON SHEET" customClass="CDButtonSheetView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8pp-Ee-e3J" userLabel="BUTTON SHEET" customClass="CDButtonSheet">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="64" translatesAutoresizingMaskIntoConstraints="NO" id="fzQ-xC-bfH" userLabel="LABEL 1" customClass="CDButtonSheetLabel">
-                                        <rect key="frame" x="0.0" y="0.0" width="64" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 2" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="64" translatesAutoresizingMaskIntoConstraints="NO" id="xkI-fl-5hL" userLabel="LABEL 2" customClass="CDButtonSheetLabel">
-                                        <rect key="frame" x="64" y="0.0" width="64" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 3" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="64" translatesAutoresizingMaskIntoConstraints="NO" id="ntX-qI-NPF" userLabel="LABEL 3" customClass="CDButtonSheetLabel">
-                                        <rect key="frame" x="128" y="0.0" width="64" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 4" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="64" translatesAutoresizingMaskIntoConstraints="NO" id="lIY-he-sO1" userLabel="LABEL 4" customClass="CDButtonSheetLabel">
-                                        <rect key="frame" x="192" y="0.0" width="64" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label 5" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="64" translatesAutoresizingMaskIntoConstraints="NO" id="ofF-aY-JnV" userLabel="LABEL 5" customClass="CDButtonSheetLabel">
-                                        <rect key="frame" x="256" y="0.0" width="64" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="lIY-he-sO1" firstAttribute="leading" secondItem="ntX-qI-NPF" secondAttribute="trailing" id="0yL-mT-cLL"/>
-                                    <constraint firstItem="ntX-qI-NPF" firstAttribute="height" secondItem="xkI-fl-5hL" secondAttribute="height" id="I62-Up-sUE"/>
-                                    <constraint firstAttribute="bottom" secondItem="fzQ-xC-bfH" secondAttribute="bottom" id="Jys-dB-a10"/>
-                                    <constraint firstItem="fzQ-xC-bfH" firstAttribute="leading" secondItem="8pp-Ee-e3J" secondAttribute="leading" id="K11-YS-aCT"/>
-                                    <constraint firstItem="lIY-he-sO1" firstAttribute="top" secondItem="8pp-Ee-e3J" secondAttribute="top" id="MVp-OJ-Pcf"/>
-                                    <constraint firstItem="ntX-qI-NPF" firstAttribute="width" secondItem="xkI-fl-5hL" secondAttribute="width" id="Oc1-ZN-tXy"/>
-                                    <constraint firstItem="ntX-qI-NPF" firstAttribute="leading" secondItem="xkI-fl-5hL" secondAttribute="trailing" id="OsZ-Vx-1dZ"/>
-                                    <constraint firstItem="ofF-aY-JnV" firstAttribute="leading" secondItem="lIY-he-sO1" secondAttribute="trailing" id="Qmp-eV-Fwl"/>
-                                    <constraint firstItem="ntX-qI-NPF" firstAttribute="width" secondItem="ofF-aY-JnV" secondAttribute="width" id="Quw-Zj-31K"/>
-                                    <constraint firstAttribute="bottom" secondItem="ntX-qI-NPF" secondAttribute="bottom" id="Qwz-MG-K73"/>
-                                    <constraint firstAttribute="bottom" secondItem="lIY-he-sO1" secondAttribute="bottom" id="SYz-gf-ruX"/>
-                                    <constraint firstItem="ntX-qI-NPF" firstAttribute="width" secondItem="lIY-he-sO1" secondAttribute="width" id="XAj-oP-Fud"/>
-                                    <constraint firstItem="xkI-fl-5hL" firstAttribute="top" secondItem="8pp-Ee-e3J" secondAttribute="top" id="Y63-R3-w1y"/>
-                                    <constraint firstItem="ntX-qI-NPF" firstAttribute="width" secondItem="fzQ-xC-bfH" secondAttribute="width" id="Ziz-zc-dOY"/>
-                                    <constraint firstAttribute="bottom" secondItem="xkI-fl-5hL" secondAttribute="bottom" id="a6l-vB-y2k"/>
-                                    <constraint firstAttribute="bottom" secondItem="ofF-aY-JnV" secondAttribute="bottom" id="bsj-NL-y7w"/>
-                                    <constraint firstItem="ntX-qI-NPF" firstAttribute="height" secondItem="lIY-he-sO1" secondAttribute="height" id="dLq-d3-D4t"/>
-                                    <constraint firstItem="ntX-qI-NPF" firstAttribute="height" secondItem="fzQ-xC-bfH" secondAttribute="height" id="fkH-EK-4b9"/>
-                                    <constraint firstItem="ntX-qI-NPF" firstAttribute="top" secondItem="8pp-Ee-e3J" secondAttribute="top" id="hkG-cT-pTU"/>
-                                    <constraint firstItem="xkI-fl-5hL" firstAttribute="leading" secondItem="fzQ-xC-bfH" secondAttribute="trailing" id="hqw-0k-9w9"/>
-                                    <constraint firstItem="ofF-aY-JnV" firstAttribute="top" secondItem="8pp-Ee-e3J" secondAttribute="top" id="jIr-1F-cUi"/>
-                                    <constraint firstItem="fzQ-xC-bfH" firstAttribute="top" secondItem="8pp-Ee-e3J" secondAttribute="top" id="k6h-rG-i3t"/>
                                     <constraint firstAttribute="height" constant="44" id="kGM-zY-yye"/>
-                                    <constraint firstItem="ntX-qI-NPF" firstAttribute="height" secondItem="ofF-aY-JnV" secondAttribute="height" id="n4d-Zf-9ut"/>
-                                    <constraint firstAttribute="trailing" secondItem="ofF-aY-JnV" secondAttribute="trailing" id="pLL-IU-KQc"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="buttonSheetSelectedColor">
                                         <color key="value" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outlet property="label1" destination="fzQ-xC-bfH" id="A7y-BL-DhV"/>
-                                    <outlet property="label2" destination="xkI-fl-5hL" id="SG4-Ib-2NE"/>
-                                    <outlet property="label3" destination="ntX-qI-NPF" id="gcP-xy-kAp"/>
-                                    <outlet property="label4" destination="lIY-he-sO1" id="sDs-0s-Gme"/>
-                                    <outlet property="label5" destination="ofF-aY-JnV" id="lyA-k5-aYG"/>
-                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

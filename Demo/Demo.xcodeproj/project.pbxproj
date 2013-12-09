@@ -10,7 +10,7 @@
 		3C8D7065B25D2E8C96FC9A15 /* CDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D775A57129A52327D9D49 /* CDAppDelegate.m */; };
 		3C8D7195C19E910D5571BD88 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D743723B5A63435AB6114 /* main.m */; };
 		3C8D71F6D8223037D1F5D673 /* CDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D79ECAEAB60E18F718F14 /* CDViewController.m */; };
-		3C8D73D74C9A30418A72BADF /* CDButtonSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D78CEF2070B2A89CCF731 /* CDButtonSheetView.m */; };
+		3C8D73D74C9A30418A72BADF /* CDButtonSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8D78CEF2070B2A89CCF731 /* CDButtonSheet.m */; };
 		3C8D744CAA8CF9DE6EC5EF21 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C8D7B5ECCBF28AD79D9EA99 /* Images.xcassets */; };
 		3C8D76470DA1817DFCBB63E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C8D7BC4AD8D32FC10AE0851 /* Main.storyboard */; };
 		3C8D7D5769279924E31CDD2A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3C8D74BD070171BE6697ACF1 /* InfoPlist.strings */; };
@@ -40,12 +40,12 @@
 		3C8D756E99361A24BC814BD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3C8D775A57129A52327D9D49 /* CDAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDAppDelegate.m; sourceTree = "<group>"; };
 		3C8D78208A803562E3220B95 /* CDAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDAppDelegate.h; sourceTree = "<group>"; };
-		3C8D78CEF2070B2A89CCF731 /* CDButtonSheetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDButtonSheetView.m; path = ../../CDButtonSheet/CDButtonSheetView.m; sourceTree = "<group>"; };
+		3C8D78CEF2070B2A89CCF731 /* CDButtonSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDButtonSheet.m; path = ../../CDButtonSheet/CDButtonSheet.m; sourceTree = "<group>"; };
 		3C8D79E18F8B1789A4C8EB32 /* Demo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = "Demo-Info.plist"; sourceTree = "<group>"; };
 		3C8D79ECAEAB60E18F718F14 /* CDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDViewController.m; sourceTree = "<group>"; };
 		3C8D7B5ECCBF28AD79D9EA99 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3C8D7C6C6CA8DAF9210756BB /* CDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDViewController.h; sourceTree = "<group>"; };
-		3C8D7CE3EB59CC350470DB6C /* CDButtonSheetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDButtonSheetView.h; path = ../../CDButtonSheet/CDButtonSheetView.h; sourceTree = "<group>"; };
+		3C8D7CE3EB59CC350470DB6C /* CDButtonSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDButtonSheet.h; path = ../../CDButtonSheet/CDButtonSheet.h; sourceTree = "<group>"; };
 		3C8D7EC298610CF9AF37FCB6 /* Demo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Demo-Prefix.pch"; sourceTree = "<group>"; };
 		F0B3337E185204810052F78B /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0B33381185204810052F78B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -98,8 +98,8 @@
 			children = (
 				3C8D78208A803562E3220B95 /* CDAppDelegate.h */,
 				3C8D775A57129A52327D9D49 /* CDAppDelegate.m */,
-				3C8D7CE3EB59CC350470DB6C /* CDButtonSheetView.h */,
-				3C8D78CEF2070B2A89CCF731 /* CDButtonSheetView.m */,
+				3C8D7CE3EB59CC350470DB6C /* CDButtonSheet.h */,
+				3C8D78CEF2070B2A89CCF731 /* CDButtonSheet.m */,
 				3C8D7C6C6CA8DAF9210756BB /* CDViewController.h */,
 				3C8D79ECAEAB60E18F718F14 /* CDViewController.m */,
 				3C8D7B5ECCBF28AD79D9EA99 /* Images.xcassets */,
@@ -256,7 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C8D7065B25D2E8C96FC9A15 /* CDAppDelegate.m in Sources */,
-				3C8D73D74C9A30418A72BADF /* CDButtonSheetView.m in Sources */,
+				3C8D73D74C9A30418A72BADF /* CDButtonSheet.m in Sources */,
 				3C8D71F6D8223037D1F5D673 /* CDViewController.m in Sources */,
 				3C8D7195C19E910D5571BD88 /* main.m in Sources */,
 			);

@@ -6,18 +6,18 @@
 
 #import <Foundation/Foundation.h>
 
+@class CDButtonSheet;
+
 @protocol CDButtonSheetDelegate
-- (void) didSelectButtonAtIndex:(NSUInteger)index;
+- (void) buttonSheet:(CDButtonSheet*)sheet didSelectButtonAtIndex:(NSUInteger)index;
 @end
 
 
-@interface CDButtonSheetView : UIView
+@interface CDButtonSheet : UIView
 
 @property(nonatomic, weak) id <CDButtonSheetDelegate> delegate;
+@property(nonatomic, strong) NSArray* buttonLabels;
 @property(nonatomic, strong) UIColor* buttonSheetSelectedColor;
 
-- (void) prepareForUse;
-
-- (void) setLabels:(NSArray*)stringLabels;
 
 @end
