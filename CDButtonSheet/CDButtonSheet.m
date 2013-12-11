@@ -48,7 +48,7 @@
 - (void) setHidden:(BOOL)hidden animated:(BOOL)animated
 {
     NSTimeInterval duration = animated ? self.animationDuration : 0.0;
-        [super setHidden:NO]; // make visible before animation
+    [super setHidden:NO]; // make visible before animation
 
     [UIView animateWithDuration:duration animations:^{
         if (hidden)
@@ -65,6 +65,11 @@
         NSLog(@"Animation finished.");
     }];
 
+}
+
+- (CGRect) frameForButtonAtIndex:(NSUInteger)index
+{
+    return [self.buttons[index] frame];
 }
 
 - (void)setButtonLabels:(NSArray *)buttonLabels

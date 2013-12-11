@@ -22,5 +22,6 @@
 @property(nonatomic, assign, getter = shouldHideOnSelect) BOOL hideOnSelect;
 
 - (void) setHidden:(BOOL)hidden animated:(BOOL)animated;
+- (CGRect) frameForButtonAtIndex:(NSUInteger)index;
 
 @end

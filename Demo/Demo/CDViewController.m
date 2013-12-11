@@ -28,14 +28,15 @@
 
 - (IBAction)toggle:(id)sender {
     [self.buttonSheet setHidden:!self.buttonSheet.hidden animated:YES];
-    
+  
 }
 
 #pragma mark - CDButtonSheetDelegate
 
 - (void) buttonSheet:(CDButtonSheet*)sheet didSelectButtonAtIndex:(NSUInteger)index
 {
-    NSLog(@"SELECTED: %d", index);
+    NSLog(@"SELECTED: %d :: %@", index, NSStringFromCGRect([sheet frameForButtonAtIndex:index]));
+    
 }
 
 @end
