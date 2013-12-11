@@ -48,9 +48,8 @@
 - (void) setHidden:(BOOL)hidden animated:(BOOL)animated
 {
     NSTimeInterval duration = animated ? self.animationDuration : 0.0;
-    if (!hidden) {
         [super setHidden:NO]; // make visible before animation
-    }
+
     [UIView animateWithDuration:duration animations:^{
         if (hidden)
         {
@@ -59,8 +58,9 @@
             self.frame = CGRectOffset(self.frame, 0, -self.frame.size.height);
         }
     } completion:^(BOOL finished) {
+        [super setHidden:hidden]; // make hidden after animation
         if (hidden) {
-            [super setHidden:YES]; // make hidden after animation
+            [self resetButtonColors];
         }
         NSLog(@"Animation finished.");
     }];
@@ -69,14 +69,19 @@
 
 - (void)setButtonLabels:(NSArray *)buttonLabels
 {
-    if (buttonLabels.count != 5)
+    if (buttonLabels.count == 0)
     {
         [NSException raise:@"IllegalArgumentException"
-                    format:@"stringLabels array must contain exactly 5 elements, it contained %d", buttonLabels.count];
+                    format:@"stringLabels array must contain at least 1 element, it contained %d", buttonLabels.count];
     }
     NSMutableArray* btns = [NSMutableArray array];
     CGFloat w = self.frame.size.width / buttonLabels.count;
     CGFloat h = self.frame.size.height;
+    
+    for (UIButton* oldButton in self.buttons)
+    {
+        [oldButton removeFromSuperview];
+    }
     
     for (NSUInteger i = 0; i < buttonLabels.count; i++)
     {
@@ -88,13 +93,29 @@
         [btns addObject:btn];
         [self addSubview:btn];
     }
+    self.buttons = [NSArray arrayWithArray:btns];
 }
 
 - (void) buttonPressed:(id)sender
 {
+    [self resetButtonColors];
     UIButton* btn = sender;
     NSUInteger index = btn.tag;
+    btn.backgroundColor = self.buttonSheetSelectedColor;
     [self.delegate buttonSheet:self didSelectButtonAtIndex:index];
+    
+    if (self.shouldHideOnSelect)
+    {
+        [self setHidden:YES animated:YES];
+    }
+}
+
+- (void) resetButtonColors
+{
+    for (UIButton* b in self.buttons)
+    {
+        b.backgroundColor = [UIColor clearColor];
+    }
 }
 
 @end

@@ -19,6 +19,7 @@
 @property(nonatomic, strong) NSArray* buttonLabels;
 @property(nonatomic, strong) UIColor* buttonSheetSelectedColor;
 @property(nonatomic, assign) NSTimeInterval animationDuration;
+@property(nonatomic, assign, getter = shouldHideOnSelect) BOOL hideOnSelect;
 
 - (void) setHidden:(BOOL)hidden animated:(BOOL)animated;
 

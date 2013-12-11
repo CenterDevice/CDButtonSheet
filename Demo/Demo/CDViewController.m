@@ -21,13 +21,13 @@
     
     self.buttonSheet.delegate = self;
     self.buttonSheet.buttonSheetSelectedColor = [UIColor yellowColor];
-    self.buttonSheet.buttonLabels = @[ @"Abbrechen", @"Miteigentümer", @"Bearbeiter", @"Leser", @"Keine Berechtigung" ];
+    self.buttonSheet.buttonLabels = @[ @"Abbrechen", @"Miteigentümer", @"Bearbeiter", @"Leser" ];
     self.buttonSheet.animationDuration = 0.2;
+    self.buttonSheet.hideOnSelect = YES;
 }
+
 - (IBAction)toggle:(id)sender {
-    static BOOL hidden = YES;
-    [self.buttonSheet setHidden:hidden animated:YES];
-    hidden = !hidden;
+    [self.buttonSheet setHidden:!self.buttonSheet.hidden animated:YES];
     
 }
 
