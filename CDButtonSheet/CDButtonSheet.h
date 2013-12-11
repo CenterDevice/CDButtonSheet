@@ -18,6 +18,8 @@
 @property(nonatomic, weak) id <CDButtonSheetDelegate> delegate;
 @property(nonatomic, strong) NSArray* buttonLabels;
 @property(nonatomic, strong) UIColor* buttonSheetSelectedColor;
+@property(nonatomic, assign) NSTimeInterval animationDuration;
 
+- (void) setHidden:(BOOL)hidden animated:(BOOL)animated;
 
 @end

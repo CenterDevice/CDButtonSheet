@@ -22,6 +22,13 @@
     self.buttonSheet.delegate = self;
     self.buttonSheet.buttonSheetSelectedColor = [UIColor yellowColor];
     self.buttonSheet.buttonLabels = @[ @"Abbrechen", @"Miteigentümer", @"Bearbeiter", @"Leser", @"Keine Berechtigung" ];
+    self.buttonSheet.animationDuration = 0.2;
+}
+- (IBAction)toggle:(id)sender {
+    static BOOL hidden = YES;
+    [self.buttonSheet setHidden:hidden animated:YES];
+    hidden = !hidden;
+    
 }
 
 #pragma mark - CDButtonSheetDelegate
