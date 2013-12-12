@@ -98,6 +98,7 @@
         [btns addObject:btn];
         [self addSubview:btn];
     }
+    _buttonLabels = [buttonLabels copy];
     self.buttons = [NSArray arrayWithArray:btns];
 }
 
