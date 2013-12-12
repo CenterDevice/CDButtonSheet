@@ -53,9 +53,9 @@
     [UIView animateWithDuration:duration animations:^{
         if (hidden)
         {
-            self.frame = CGRectOffset(self.frame, 0, self.frame.size.height);
+            self.transform = CGAffineTransformMakeTranslation(0, self.frame.size.height);
         } else {
-            self.frame = CGRectOffset(self.frame, 0, -self.frame.size.height);
+            self.transform = CGAffineTransformIdentity;
         }
     } completion:^(BOOL finished) {
         [super setHidden:hidden]; // make hidden after animation
