@@ -28,14 +28,29 @@
 
 - (IBAction)toggle:(id)sender {
     [self.buttonSheet setHidden:!self.buttonSheet.hidden animated:YES];
-  
 }
 
 #pragma mark - CDButtonSheetDelegate
 
 - (void) buttonSheet:(CDButtonSheet*)sheet didSelectButtonAtIndex:(NSUInteger)index
 {
-    NSLog(@"SELECTED: %d :: %@", index, NSStringFromCGRect([sheet frameForButtonAtIndex:index]));
+    CGRect buttonFrame = [sheet frameForButtonAtIndex:index];
+    NSLog(@"SELECTED: %d :: %@", index, NSStringFromCGRect(buttonFrame));
+
+    UILabel* snapshot = [[UILabel alloc] initWithFrame:buttonFrame];
+    snapshot.text = self.buttonSheet.buttonLabels[index];
+    snapshot.textAlignment = NSTextAlignmentCenter;
+    
+    [self.view addSubview:snapshot];
+    snapshot.center = [self.view convertPoint:CGPointMake(CGRectGetMidX(buttonFrame), CGRectGetMidY(buttonFrame)) fromView:sheet];
+    [UIView animateWithDuration:0.5 animations:^{
+        snapshot.alpha = 0.0;
+        snapshot.transform = CGAffineTransformMakeScale(0.1, 0.1);
+        snapshot.center = self.view.center;
+    } completion:^(BOOL finished) {
+        [snapshot removeFromSuperview];
+    }];
+    
     
 }
 
